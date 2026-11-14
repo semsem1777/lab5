@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 5</title>
+  <style>
+    x-center, x-year { visibility: hidden; }
+    x-center:defined, x-year:defined { visibility: visible; }
+  </style>
+  <script src="custom-elements.js"></script>
+</head>
+<body>
+  <x-center>
+    <h1>Hello from x-center</h1>
+    <p>Centered by inline style added to the element's innerHTML.</p>
+  </x-center>
+
+  <x-center>
+    <small>&copy; <x-year></x-year> My Company</small>
+  </x-center>
+</body>
+</html>
