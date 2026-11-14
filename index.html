@@ -1,53 +1,22 @@
-<! DOCTYPE html>
-<html lang="eng">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-        :root {
-            --main-background: #FFF001;
-            --main-foreground: #54C1E6;
-            --pane-padding: 5px 42px;
-        }
-
-        body {
-            background-color: var(--main-background);
-            foreground-color: var(--main-foreground);
-
-
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>Lab 5</title>
+  <style>
+    x-center, x-year { visibility: hidden; }
+    x-center:defined, x-year:defined { visibility: visible; }
+  </style>
+  <script src="custom-elements.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <img src="Cyberpunk2077.jpg">
-    </div>
+  <x-center>
+    <h1>Hello from x-center</h1>
+    <p>Centered by inline style added to the element's innerHTML.</p>
+  </x-center>
 
-
-    <style>
-        .container {
-            display: grid;
-            place-items: center;
-            /* Centers horizontally AND vertically*/
-            min-height: 100vh;
-            /* Makes the body take up 100% of the screen height */
-            margin: 0;
-            /* Removes default browser spacing so there's no scrollbar */
-
-        }
-    </style>
-    <footer>
-        <this-year></this-year>
-    </footer>
-    <script>
-        class ThisYear extends HTMLElement {
-            connectedCallback() {
-                const currentYear = new Date() .getFullYear ();
-                this.innerHTML = '<p>&copy; ${2077}</p>';
-            }
-        }
-        customElements. define('this-year', ThisYear);
-    </script>
+  <x-center>
+    <small>&copy; <x-year></x-year> My Company</small>
+  </x-center>
 </body>
-
 </html>
